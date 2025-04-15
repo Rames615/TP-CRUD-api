@@ -1,0 +1,121 @@
+
+    *{
+        margin : 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        text-decoration: none;
+    }
+
+    body{
+      align-items: center;
+      text-align: center;
+    }
+
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+    }
+  
+  nav{
+      width: 100%;
+      height: 10vh;
+      background:#ffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: sticky;
+       top: 0;
+      left: 0; 
+      z-index: 1000;
+  }
+    
+    .container {
+        background-color: #4f46e5;
+        color: white;
+        width: 100vw;
+        height: 45vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+      }
+  
+      .container h1 {
+        font-size: 3em;
+        margin: 0;
+        text-align: center;
+        gap: 5rem;
+      }
+
+       h2{
+        font-size: 2rem;
+        text-align: center;
+        margin: 30px 0 30px;
+      }
+  
+
+      .card {
+        background:  #46e569;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px #0000001a;
+        width: 100%;
+        gap: 10rem;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+
+      .card button{
+        margin: 20px;
+      }
+  
+      .card h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      #saisieTache{
+        align-items: center;
+        padding: 12px;
+        width: 300px;
+        background-color: #eee7e7;
+        margin-bottom: 30px;
+      }
+      
+      #ajouterTache{
+        align-items: center;
+        padding: 12px;
+        width: 300px;
+        margin-left: 10px;
+        background-color: #eee7e7;
+
+
+      }
+      #listeTaches{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 12px;
+        width: 100vw;
+        gap: 5rem;
+        background-color:  #4f46e5;
+      }
+      
+      .modifier, .supprimer{
+        margin: 10px;
+        background-color: #b3ebbf;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+ 
+}
