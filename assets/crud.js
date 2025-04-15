@@ -14,11 +14,11 @@ function createWork(workTitle) {
   // pour modifier boutton
   const btnModifier = document.createElement("button");
   btnModifier.textContent = "Modifier";
-  btnModifier.classList.add("modifier");
+  btnModifier.className ="modifier";
   btnModifier.addEventListener("click", () => {
-    const nouveauTexte = prompt("Modifier la tâche :", addCard.textContent);
-    if (nouveauTexte !== null && nouveauTexte.trim() !== "") {
-      addCard.textContent = nouveauTexte;
+    const newText = prompt("Modifier la tâche :", addCard.textContent);
+    if (newText !== null && newText.trim() !== "") {
+      addCard.textContent = newText;
     }
   });
 
