@@ -120,3 +120,11 @@ h2 {
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
+
+.modifier:hover{
+  background-color:#ffffff;
+}
+
+.supprimer:hover{
+  background-color:#ffff;
+}
