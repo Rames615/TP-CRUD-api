@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #ff6347; /* Tomate */
+    --secondary-color: #b7b7b7; /* Gris foncé */
+    --background: linear-gradient(
+      to right,
+      #6c49a5,
+      #351dac
+    ); /* Dégradé de pêche */
+    --text-color: #000; /* Noir */
+    --footer-color: #6a49d6; /* Gris moyen */
+  }
+
+  body {
+    background: var(
+      --background
+    ); /* Utilisation de la propriété background */
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  p {
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  footer {
+    background: var(--footer-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
