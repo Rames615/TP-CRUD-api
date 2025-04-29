@@ -32,6 +32,30 @@
     margin: 10px 0;
   }
 
+  /* Modal styles */
+  #cookieModal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000080;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 150px auto;
+    text-align: center;
+  }
+
+  button {
+    margin: 10px;
+  }
+
   footer {
     background: var(--footer-color);
     text-align: center;

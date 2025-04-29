@@ -19,7 +19,7 @@
     // Accept button logic
     acceptBtn.addEventListener('click', () => {
         if (checkbox.checked) {
-            document.cookie = "nom=Rames; path=/;";
+            document.cookie = "Rames local storage; path=/;";
             paragraphe.innerHTML = "Cookie accepté et enregistré : " + document.cookie;
             modal.style.display = "none";
         } else {
