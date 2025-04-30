@@ -6,6 +6,16 @@
   text-decoration: none;
 }
 
+:root {
+  --primary-color: #1e3a8a; /* Deep blue for focus */
+  --secondary-color: #2563eb; /* Bright blue for energy */
+  --tertiary-color: #f3f4f6; /* Soft gray for readability */
+  --quaternary-color: #9ca3af; /* Neutral gray for balance */
+  --font-size: 24px;
+  --padding: 20px;
+}
+
+
 body {
   align-items: center;
   text-align: center;
@@ -42,16 +52,51 @@ nav {
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px #0000001a;
-  width: 25%;
+  background: var(--secondary-color);
+  color: var(--tertiary-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: var(--padding);
+  margin: 20px;
+  width: 300px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(15px); /* Flou pour l'effet glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+}
+.card h2 {
+  color: var(--tertiary-color);
+  font-size: calc(var(--font-size) * 1.2);
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: calc(var(--font-size) * 0.8);
+  color: var(--quaternary-color);
+  margin-bottom: 15px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.card:hover h2 {
+  color: var(--tertiary-color);
+}
+.card:hover p {
+  color: var(--tertiary-color);
 }
 
-.card h2 {
-  font-size: 1.5em;
+.card a {
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: calc(var(--font-size) * 0.8);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card a:hover {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
 }
 
 main {

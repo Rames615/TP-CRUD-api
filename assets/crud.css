@@ -37,26 +37,6 @@
     margin: 30px 0 30px;
   }
   
-  .card {
-    background: #46e569;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px #0000001a;
-    width: 100%;
-    gap: 10rem;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-  
-  .card button {
-    margin: 20px;
-  }
-  
-  .card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
   #saisieTache {
     align-items: center;
     padding: 12px;
