@@ -1,0 +1,71 @@
+/* Styles de base pour l'interface */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #4a6fa5;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4a6fa5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button:hover {
+    background-color: #3a5a80;
+  }
+  
+  #cookieDisplay {
+    background-color: #e9f0f7;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    min-height: 50px;
+  }
+  
+  .help-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .hint {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 4px solid #ffc107;
+    margin: 10px 0;
+  }

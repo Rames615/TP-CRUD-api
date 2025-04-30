@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/crudCookie.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>TP CRUD sur les Cookies</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active" title="Accueil">
+            <!-- icon fontawsome home -->
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <!-- crud -->
+        <li>
+          <a href="/arraystips.html" title="Tips Tableau">
+            <!-- icon fontawsome grid -->
+            <i class="fas fa-th"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/crud.html" title="CRUD">
+            <!-- icon fa function -->
+            <i class="fas fa-cogs"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/modal.html" title="Modal">
+            <!-- icon fa modal -->
+            <i class="fas fa-window-restore"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/cookie.html" title="Cookie">
+            <!-- icon fa cookie -->
+            <i class="fas fa-cookie"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/crudCookie.html" title="CookieTips">
+            <!-- icon fa tips -->
+            <i class="fas fa-cookie-bite"></i
+          ></a>
+        </li>
+        <li>
+          <a href="api.html" title="API">
+            <!-- icon fa api -->
+            <i class="fas fa-plug"></i
+          ></a>
+        </li>
+        <li>
+          <a href="aide.html" title="Aide">
+            <!-- icon fa help -->
+            <i class="fas fa-question-circle"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>TP CRUD sur les Cookies</h1>
+
+    <div class="section">
+      <h2>Qu'est-ce qu'un cookie ?</h2>
+      <p>
+        Un cookie est une petite information textuelle envoyée par un site web
+        et stockée dans le navigateur de l'utilisateur. Les cookies permettent
+        de sauvegarder des préférences utilisateur, des données de session, ou
+        d'autres informations utiles pour améliorer l'expérience utilisateur.
+      </p>
+      <div class="hint">
+        <strong>Comment voir les cookies ?</strong> Pour consulter les cookies
+        stockés dans votre navigateur :
+        <ul>
+          <li>
+            Ouvrez les outils de développement (F12 ou clic droit → Inspecter)
+          </li>
+          <li>
+            Allez dans l'onglet "Application" (Chrome) ou "Stockage" (Firefox)
+          </li>
+          <li>Développez la section "Cookies" et sélectionnez votre site</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>1. Créer un cookie</h2>
+      <label for="createName">Nom du cookie :</label>
+      <input type="text" id="createName" placeholder="Ex: username" />
+
+      <label for="createValue">Valeur du cookie :</label>
+      <input type="text" id="createValue" placeholder="Ex: Pierre" />
+
+      <button id="createBtn">Créer le cookie</button>
+
+      <p class="help-text">
+        Cette section vous permet de créer un nouveau cookie en spécifiant son
+        nom et sa valeur.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>2. Lire tous les cookies</h2>
+      <button id="readBtn">Lire les cookies</button>
+      <div id="cookieDisplay">Les cookies s'afficheront ici...</div>
+
+      <p class="help-text">
+        Cette section vous permet de lire tous les cookies actuellement stockés
+        pour ce site.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>3. Mettre à jour un cookie</h2>
+      <label for="updateName">Nom du cookie à modifier :</label>
+      <input type="text" id="updateName" placeholder="Ex: username" />
+
+      <label for="updateValue">Nouvelle valeur :</label>
+      <input type="text" id="updateValue" placeholder="Ex: Jacques" />
+
+      <button id="updateBtn">Mettre à jour le cookie</button>
+
+      <p class="help-text">
+        Cette section vous permet de modifier la valeur d'un cookie existant en
+        spécifiant son nom et sa nouvelle valeur.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>4. Supprimer un cookie</h2>
+      <label for="deleteName">Nom du cookie à supprimer :</label>
+      <input type="text" id="deleteName" placeholder="Ex: username" />
+
+      <button id="deleteBtn">Supprimer le cookie</button>
+
+      <p class="help-text">
+        Cette section vous permet de supprimer un cookie en spécifiant son nom.
+        Note : Pour vraiment supprimer un cookie, il faudrait normalement
+        définir une date d'expiration passée. Dans ce TP, nous utilisons une
+        méthode simplifiée.
+      </p>
+    </div>
+    <script src="/assets/js/crudCookie.js"></script>
+  </body>
+</html>

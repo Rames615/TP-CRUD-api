@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
+    <title>cookies</title>
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     rel="stylesheet"
   />
     <link rel="stylesheet" href="/assets/arraystips.css" />
-    <link rel="stylesheet" href="/assets/crud.css" />
+    <link rel="stylesheet" href="/assets/cookie.css" />
+
   </head>
   <body>
     <nav>
@@ -24,17 +25,21 @@
         <li><a href="aide.html">aide</a></li>
       </ul>
     </nav>
-    <div class="container">
-      <h1>
-        <span>CRUD</span><br /><span id="subTitle"
-          >Agir Sur Les Données En JavaScript</span
-        >
-      </h1>
+    
+    <div id="cookieModal">
+      <div class="modal-content">
+        <h3>Acceptez-vous les cookies ?</h3>
+        <label>
+          <input type="checkbox" id="acceptCheckbox"> J'accepte les cookies
+        </label><br />
+        <button id="acceptBtn">Accepter</button>
+        <button id="refuseBtn">Refuser</button>
+      </div>
     </div>
-    <h2>To-Do List</h2>
-    <input type="text" id="saisieTache" placeholder="Ajouter une tâche" />
-    <button id="ajouterTache">Ajouter</button>
-    <ul id="listeTaches"></ul>
+  
+
+    <p></p>
+       
     <footer>
       <div class="footer-content">
         <h3>Le Repère du Développeur</h3>
@@ -78,6 +83,12 @@
         <p>&copy; 2025 Le Repère du Développeur. Tous droits réservés.</p>
       </div>
     </footer>
-    <script src="assets/js/crud.js"></script>
+
+    </body>
+    <script src="assets/js/cookies.js"></script>
   </body>
 </html>
+
+
+
+

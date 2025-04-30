@@ -3,55 +3,156 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
     <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="stylesheet" href="/assets/crud.css" />
+    <!-- <link rel="stylesheet" href="/assets/arraystips.css" > -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Tips Array</title>
   </head>
   <body>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="crud.html">crud</a></li>
-        <li><a href="modal.html">modal</a></li>
-        <li><a href="cookies.html">cookies</a></li>
-        <li><a href="api.html">api</a></li>
-        <li><a href="aide.html">aide</a></li>
+        <li>
+          <a href="index.html" class="active" title="Accueil">
+            <!-- icon fontawsome home -->
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <!-- crud -->
+        <li>
+          <a href="/arraystips.html" title="Tips Tableau">
+            <!-- icon fontawsome grid -->
+            <i class="fas fa-th"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/crud.html" title="CRUD">
+            <!-- icon fa function -->
+            <i class="fas fa-cogs"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/modal.html" title="Modal">
+            <!-- icon fa modal -->
+            <i class="fas fa-window-restore"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/cookie.html" title="Cookie">
+            <!-- icon fa cookie -->
+            <i class="fas fa-cookie"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/crudCookie.html" title="CookieTips">
+            <!-- icon fa tips -->
+            <i class="fas fa-cookie-bite"></i
+          ></a>
+        </li>
+        <li>
+          <a href="api.html" title="API">
+            <!-- icon fa api -->
+            <i class="fas fa-plug"></i
+          ></a>
+        </li>
+        <li>
+          <a href="aide.html" title="Aide">
+            <!-- icon fa help -->
+            <i class="fas fa-question-circle"></i
+          ></a>
+        </li>
       </ul>
     </nav>
     <div class="container">
       <h1>
-        <span> Les différentes étapes de l'apprentissage </span><br /><span
-          id="subTitle"
-          >Du JavaScript</span
+        <span>Le Repère du développeur</span><br /><span
+          >Site de différentes pratiques</span
         >
+        //>
       </h1>
     </div>
-    <section class="section">
+    <div class="grid">
       <div class="card">
-        <h2>map</h2>
-        <p>
-          Mon tableau de sortie est different mais fait la meme longeur que le
-          tableau d'entrée.
-        </p>
+        <img src="https://picsum.photos/200/150?random=1" alt="Tips Tableau" />
+        <h2>Tips Tableau</h2>
+        <p>Explorez les notions de tableau comme map, filter, et reduce.</p>
+        <a href="arraystips.html">Voir plus</a>
       </div>
       <div class="card">
-        <h2>Filter</h2>
-        <p>
-          Mon tableau de sortie est different mais plus court que le tableau
-          d'entrée.
-        </p>
+        <img src="https://picsum.photos/200/150?random=2" alt="CRUD" />
+        <h2>CRUD</h2>
+        <p>Apprenez les opérations de base: Create, Read, Update, Delete.</p>
+        <a href="crud.html">Voir plus</a>
       </div>
       <div class="card">
-        <h2>Reduce</h2>
-        <p>
-          Mon tableau de sortie est un seul élement, il n'a pas la même longeur
-          que le tableau d'entrée.
-        </p>
+        <img src="https://picsum.photos/200/150?random=3" alt="Modal" />
+        <h2>Modal</h2>
+        <p>Découvrez comment créer et gérer des modals.</p>
+        <a href="modal.html">Voir plus</a>
       </div>
-    </section>
-    <footer id="footer">
-      <p>Tout les droits réserves @ Roadmap site 2025</p>
+      <div class="card">
+        <img src="https://picsum.photos/200/150?random=4" alt="Cookie" />
+        <h2>Cookie</h2>
+        <p>Apprenez à manipuler les cookies dans vos projets.</p>
+        <a href="Cookie.html">Voir plus</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/150?random=5" alt="API" />
+        <h2>API</h2>
+        <p>Intégrez des APIs pour enrichir vos applications.</p>
+        <a href="api.html">Voir plus</a>
+      </div>
+      <div class="card">
+        <img src="https://picsum.photos/200/150?random=6" alt="Aide" />
+        <h2>Aide</h2>
+        <p>Obtenez de l'aide et des ressources pour vos projets.</p>
+        <a href="aide.html">Voir plus</a>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Le Repère du Développeur</h3>
+        <p>Un site dédié aux développeurs pour apprendre, explorer et créer.</p>
+        <div class="social-icons">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            title="Facebook"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+            title="LinkedIn"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Le Repère du Développeur. Tous droits réservés.</p>
+      </div>
     </footer>
-    <script src="assets/js/app.js"></script>
   </body>
 </html>
