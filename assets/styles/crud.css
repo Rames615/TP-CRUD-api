@@ -6,85 +6,84 @@
   --font-size: 24px;
   --padding: 20px;
 }
-   
+
 .container {
-    background-color:  #1e3a8a;
-    color: white;
-    width: 100vw;
-    height: 45vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2.5rem;
-  }
-  
-  .container h1 {
-    font-size: 3em;
-    margin: 0;
-    text-align: center;
-    gap: 5rem;
-  }
-  
-  #subTitle{
-    font-size: 2.5rem;
-    color: #46e569;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin: 30px 0 30px;
-  }
-  
-  #saisieTache {
-    align-items: center;
-    padding: 12px;
-    width: 300px;
-    background-color: #eee7e7;
-    margin-bottom: 30px;
-  }
-  
-  #ajouterTache {
-    align-items: center;
-    padding: 12px;
-    width: 300px;
-    margin-left: 10px;
-    background-color: #eee7e7;
-  }
-  #listeTaches {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 12px;
-    width: 100vw;
-    gap: 5rem;
-    background-color:  #1e3a8a;
-    margin-bottom: 10px;
-  }
-  
-  .modifier,
-  .supprimer {
-    margin: 10px;
-    background-color: #b3ebbf;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .modifier:hover{
-    background-color:#ffffff;
-  }
-  
-  .supprimer:hover{
-    background-color:#ffff;
-  }
-  
-  
+  background-color: #1e3a8a;
+  color: white;
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.container h1 {
+  font-size: 3em;
+  margin: 0;
+  text-align: center;
+  gap: 5rem;
+}
+
+#subTitle {
+  font-size: 2.5rem;
+  color: #46e569;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+
+#saisieTache {
+  align-items: center;
+  padding: 12px;
+  width: 300px;
+  background-color: #eee7e7;
+  margin-bottom: 30px;
+}
+
+#ajouterTache {
+  align-items: center;
+  padding: 12px;
+  width: 300px;
+  margin-left: 10px;
+  background-color: #eee7e7;
+}
+#listeTaches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px;
+  width: 100vw;
+  gap: 5rem;
+  background-color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.modifier,
+.supprimer {
+  margin: 10px;
+  background-color: #b3ebbf;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.modifier:hover {
+  background-color: #ffffff;
+}
+
+.supprimer:hover {
+  background-color: #ffff;
+}
+
 /* footer */
 footer {
   background-color: var(--primary-color);

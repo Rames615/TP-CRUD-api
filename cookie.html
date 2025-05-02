@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cookies</title>
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    rel="stylesheet"
-  />
-    <link rel="stylesheet" href="/assets/arraystips.css" />
-    <link rel="stylesheet" href="/assets/cookie.css" />
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles/arraystips.css" />
+    <link rel="stylesheet" href="/assets/styles/cookie.css" />
   </head>
   <body>
     <nav>
@@ -25,43 +24,48 @@
         <li><a href="aide.html">aide</a></li>
       </ul>
     </nav>
-    <h1 >Bienvenue sur Cook&I</h1>
-    <h1 id="welcome"></h1>
+    <h1>Bienvenue sur Cook&I</h1>
+    <div class="welcome"><h1 id="welcome"></h1></div>
     <p>Votre solution unique pour tous vos besoins culinaires !</p>
     <p>Découvrez nos recettes, astuces et bien plus encore.</p>
-    
 
     <!-- Modale de consentement -->
     <div id="consentModal" class="modal">
       <div class="modal-content">
         <h2>Gestion des cookies</h2>
-        <p>Ce site utilise des cookies pour améliorer votre expérience. Acceptez-vous l'utilisation de cookies?</p>
-        <button onclick="handleConsent(true)">Accepter</button>
-        <button onclick="handleConsent(false)">Refuser</button>
+        <p>
+          Ce site utilise des cookies pour améliorer votre expérience.
+          Acceptez-vous l'utilisation de cookies?
+        </p>
+        <button onclick="gestionCookie(true)">Accepter</button>
+        <button onclick="gestionCookie(false)">Refuser</button>
       </div>
     </div>
-  
+
     <!-- Modale de saisie du nom -->
     <div id="nameModal" class="modal">
       <div class="modal-content">
         <h2>personnalisation</h2>
         <p>Veuillez entrer votre prénom :</p>
-        <input type="text" id="usernameInput" placeholder="Votre nom">
-        <br>
+        <input type="text" id="usernameInput" placeholder="Votre nom" />
+        <br />
         <button onclick="saveUsername()">OK</button>
         <button onclick="cancelNameModal()">Annuler</button>
       </div>
     </div>
-  
+
     <!-- Modale d'avertissement -->
     <div id="warningModal" class="modal">
       <div class="modal-content">
         <h2>Attention</h2>
-        <p>Vous avez refusé les cookies. Certaines fonctionnalités peuvent être limitées.</p>
+        <p>
+          Vous avez refusé les cookies. Certaines fonctionnalités peuvent être
+          limitées.
+        </p>
         <button onclick="closeWarning()">Compris</button>
       </div>
     </div>
-       
+
     <footer>
       <div class="footer-content">
         <h3>Le Repère du Développeur</h3>
@@ -105,12 +109,6 @@
         <p>&copy; 2025 Le Repère du Développeur. Tous droits réservés.</p>
       </div>
     </footer>
-
-    </body>
-    <script src="assets/js/cookie.js"></script>
+    <script src="/assets/js/cookie.js"></script>
   </body>
 </html>
-
-
-
-

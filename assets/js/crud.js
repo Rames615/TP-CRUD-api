@@ -14,7 +14,7 @@ function createWork(workTitle) {
   // pour modifier boutton
   const btnModifier = document.createElement("button");
   btnModifier.textContent = "Modifier";
-  btnModifier.className ="modifier";
+  btnModifier.className = "modifier";
   btnModifier.addEventListener("click", () => {
     const newText = prompt("Modifier la tâche :", addCard.textContent);
     if (newText !== null && newText.trim() !== "") {
