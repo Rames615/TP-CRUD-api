@@ -14,7 +14,7 @@
 
 body {
   background: var(
-    --secondary-color
+    --tertiary-color
   ); /* Utilisation de la propriété background */
   color: var(--text-color);
   font-family: Arial, sans-serif;
@@ -32,6 +32,7 @@ h1 {
 p {
   text-align: center;
   margin: 10px 0;
+  color: var(--quaternary-color);
 }
 
 /* Modal styles */
@@ -93,7 +94,7 @@ button {
 
 /* footer */
 footer {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   color: var(--quaternary-color);
   text-align: center;
   padding: 20px;

@@ -15,8 +15,10 @@
   align-items: center;
   width: 50%;
   background-color: #1e3a8a;
-  border-radius: 5px;
-  color: #fcf8f8;
+  border-radius: 10px;
+  color:var(--tertiary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(15px);
   font-size: 1.2rem;
   padding: 10px;
 }
@@ -81,6 +83,9 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  border-radius: 5px;
 }
 
 /* footer */

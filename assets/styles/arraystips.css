@@ -51,17 +51,17 @@ nav {
 }
 
 .card {
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--tertiary-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: var(--padding);
   margin: 20px;
-  width: 300px;
+  width: 350px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(15px); /* Flou pour l'effet glassmorphism */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+  border: 1px solid #ffffff33; /* Bordure subtile */
 }
 .card h2 {
   color: var(--tertiary-color);
