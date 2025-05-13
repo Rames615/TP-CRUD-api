@@ -15,7 +15,7 @@
 body {
   background: var(
     --tertiary-color
-  ); /* Utilisation de la propriété background */
+  );
   color: var(--text-color);
   font-family: Arial, sans-serif;
   margin: 0;
