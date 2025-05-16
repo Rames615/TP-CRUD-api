@@ -24,48 +24,155 @@
         <li><a href="aide.html">aide</a></li>
       </ul>
     </nav>
-    <h1>Bienvenue sur Cook&I</h1>
-    <div class="welcome"><h1 id="welcome"></h1></div>
-    <p>Votre solution unique pour tous vos besoins culinaires !</p>
-    <p>Découvrez nos recettes, astuces et bien plus encore.</p>
-
-    <!-- Modale de consentement -->
-    <div id="consentModal" class="modal">
+    <!-- modal cookie accepter les terme d'utilisation -->
+    <div class="modal" id="cookieModal">
       <div class="modal-content">
-        <h2>Gestion des cookies</h2>
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Cookies</h2>
         <p>
-          Ce site utilise des cookies pour améliorer votre expérience.
-          Acceptez-vous l'utilisation de cookies?
+          Ce site utilise des cookies pour améliorer votre expérience. En
+          continuant à naviguer, vous acceptez notre utilisation des cookies.
         </p>
-        <button onclick="gestionCookie(true)">Accepter</button>
-        <button onclick="gestionCookie(false)">Refuser</button>
+        <button id="acceptCookies">Accepter</button>
       </div>
     </div>
 
-    <!-- Modale de saisie du nom -->
-    <div id="nameModal" class="modal">
-      <div class="modal-content">
-        <h2>personnalisation</h2>
-        <p>Veuillez entrer votre prénom :</p>
-        <input type="text" id="usernameInput" placeholder="Votre nom" />
-        <br />
-        <button onclick="saveUsername()">OK</button>
-        <button onclick="cancelNameModal()">Annuler</button>
-      </div>
-    </div>
-
-    <!-- Modale d'avertissement -->
-    <div id="warningModal" class="modal">
-      <div class="modal-content">
-        <h2>Attention</h2>
+    <header>
+      <h1>Les cookies et leurs expirations</h1>
+      <h2>Tips sur les dates en javascript</h2>
+      <p>Fullstack Developer | Symfony & React</p>
+    </header>
+    <section class="cookie-section">
+      <div class="cookie-card" style="width: 100%">
         <p>
-          Vous avez refusé les cookies. Certaines fonctionnalités peuvent être
-          limitées.
+          Les cookies sont des petits fichiers de données stockés sur le
+          navigateur de l'utilisateur. Ils sont utilisés pour garder une trace
+          des informations de session, des préférences utilisateur, et d'autres
+          données pertinentes.
         </p>
-        <button onclick="closeWarning()">Compris</button>
+        <p>
+          En JavaScript, la gestion des cookies se fait principalement via
+          l'objet <code>document.cookie</code>. Il est important de comprendre
+          comment définir, lire et supprimer les cookies, ainsi que leur date
+          d'expiration.
+        </p>
       </div>
-    </div>
-
+    </section>
+    <section class="cookie-section">
+      <div class="cookie-card">
+        <h2>Gestion des cookies en JavaScript</h2>
+        <p>Pour créer un cookie, vous pouvez utiliser la syntaxe suivante :</p>
+        <pre><code>document.cookie = "nom=valeur; expires=date; path=chemin";</code></pre>
+        <p>
+          Voici un exemple de création d'un cookie avec une date d'expiration :
+        </p>
+        <pre><code>document.cookie = "username=JeanQui; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";</code></pre>
+        <p>
+          Dans cet exemple, le cookie "username" est créé avec une valeur de
+          "JeanQui" et expirera le 31 décembre 2025 à 23h59 GMT.
+        </p>
+      </div>
+      <div class="cookie-card">
+        <h2>Lire un cookie</h2>
+        <p>
+          Pour lire un cookie, vous pouvez utiliser la propriété
+          <code>document.cookie</code>. Cela renverra une chaîne contenant tous
+          les cookies disponibles pour le domaine actuel.
+        </p>
+        <p>Voici un exemple de lecture d'un cookie :</p>
+        <pre><code>let cookies = document.cookie.split('; ');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i].split('=');
+        if (cookie[0] === 'username') {
+            console.log('Username:', cookie[1]);
+        }
+    }</code></pre>
+        <p>
+          Dans cet exemple, nous parcourons tous les cookies et affichons la
+          valeur du cookie "username".
+        </p>
+      </div>
+      <div class="cookie-card">
+        <h2>Supprimer un cookie</h2>
+        <p>
+          Pour supprimer un cookie, vous devez le définir avec une date
+          d'expiration dans le passé :
+        </p>
+        <pre><code>document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";</code></pre>
+        <p>
+          Dans cet exemple, le cookie "username" est supprimé en le définissant
+          avec une date d'expiration dans le passé.
+        </p>
+      </div>
+    </section>
+    <section class="cookie-section">
+      <div class="cookie-card">
+        <h2>Tips pour manipuler les dates en JavaScript</h2>
+        <p>
+          Les dates en JavaScript sont manipulées à l'aide de l'objet
+          <code>Date</code>. Voici quelques astuces utiles :
+        </p>
+        <ul>
+          <li>Créer une date actuelle : <code>let now = new Date();</code></li>
+          <li>
+            Créer une date spécifique :
+            <code>let specificDate = new Date('2025-12-31T23:59:59');</code>
+          </li>
+          <li>Obtenir l'année : <code>now.getFullYear();</code></li>
+          <li>Obtenir le mois (0-11) : <code>now.getMonth();</code></li>
+          <li>Obtenir le jour du mois : <code>now.getDate();</code></li>
+          <li>Formater une date en chaîne : <code>now.toISOString();</code></li>
+        </ul>
+      </div>
+      <div class="cookie-card">
+        <h2>Créer et supprimer un cookie avec une date</h2>
+        <p>Voici un exemple de création et de suppression d'un cookie :</p>
+        <pre><code>
+    // Pseudo-code pour créer un cookie avec une date d'expiration
+    document.cookie = "user=JohnDoe; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+    
+    // Pseudo-code pour supprimer un cookie en définissant une date d'expiration passée
+    document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+            </code></pre>
+        <p>Dans cet exemple :</p>
+        <ul>
+          <li>
+            Le cookie <code>user</code> est créé avec une valeur de
+            <code>JohnDoe</code> et une date d'expiration au 31 décembre 2025.
+          </li>
+          <li>
+            Pour supprimer le cookie, on le redéfinit avec une date d'expiration
+            dans le passé.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="skill">
+        <i class="fab fa-symfony"></i>
+        <p>Symfony</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-react"></i>
+        <p>React</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-html5"></i>
+        <p>HTML5</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-css3-alt"></i>
+        <p>CSS3</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-js-square"></i>
+        <p>JavaScript</p>
+      </div>
+      <div class="skill">
+        <i class="fab fa-node-js"></i>
+        <p>Node.js</p>
+      </div>
+    </section>
     <footer>
       <div class="footer-content">
         <h3>Le Repère du Développeur</h3>

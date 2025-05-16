@@ -1,71 +1,40 @@
-document.cookie = "nom:Rames";
-let cookie = document.cookie;
-console.log(cookie);
-
-const paragraphes = document.querySelector("p");
-console.log(paragraphes);
-
-if (cookie) {
-  paragraphes.innerHTML = `il y a un cookie, ce cookie comporte ces valeurs ${cookie}`;
-} else {
-  paragraphes.innerHTML = `il n\'y a pas de cookie pour le gouté`;
-}
-
-// Utilitaires cookies avec nom,value et la date de la création
-
-function setCookie(name, value, days) {
-  const date = new Date();
-  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie =
-    name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
-}
-
-function getCookie(name) {
-  const value = "; " + document.cookie;
-  const parts = value.split("; " + name + "=");
-  if (parts.length === 2) return parts.pop().split(";").shift();
-}
-
-
-// Gestion du consentement
-function gestionCookie(accepted) {
-  document.getElementById("consentModal").classList.remove("show");
-  if (accepted) {
-    document.getElementById("nameModal").classList.add("show");
-  } else {
-    document.getElementById("warningModal").classList.add("show");
-  }
-}
-
-// Sauvegarde du nom dans le cookie
-function saveUsername() {
-  const name = document.getElementById("usernameInput").value.trim();
-  if (name) {
-    setCookie("username", name, 7);
-    document.getElementById("nameModal").classList.remove("show");
-    showWelcome(name);
-  }
-}
-
-function cancelNameModal() {
-  document.getElementById("nameModal").classList.remove("show");
-  document.getElementById("consentModal").classList.add("show");
-}
-
-function closeWarning() {
-  document.getElementById("warningModal").classList.remove("show");
-}
-
-function showWelcome(name) {
-  document.getElementById("welcome").textContent = `Bienvenue ${name} !`;
-}
-
-// À l’ouverture de la page
-window.onload = () => {
-  const user = getCookie("username");
-  if (user) {
-    showWelcome(user);
-  } else {
-    document.getElementById("consentModal").classList.add("show");
-  }
+// stocké la modal et la mettre en hidden des le chargement de la page
+// Stocker la modal dans un objet
+const modal = {
+    container: document.getElementById('cookieModal'),
+    closeButton: document.getElementById('closeModal'),
+    acceptButton: document.getElementById('acceptCookies')
 };
+
+// Vérifier si le cookie existe déjà
+const cookieName = 'cookieConsent';
+const cookieValue = getCookie(cookieName);
+if (cookieValue === 'accepté') {
+    modal.container.style.display = 'none'; // Masquer la modal si le cookie est déjà accepté
+}
+// Fonction pour obtenir la valeur d'un cookie par son nom
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+// Fonction pour créer un cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Convertir les jours en millisecondes
+    const expires = `expires=${date.toUTCString()}`;
+    document.cookie = `${name}=${value}; ${expires}; path=/`; // Créer le cookie avec le nom, la valeur et la date d'expiration
+}
+
+// Fonction pour accepter les cookies
+function acceptCookies() {
+    setCookie(cookieName, 'accepté', 30); // Créer le cookie avec une durée de 30 jours
+    modal.container.style.display = 'none'; // Masquer la modal après l'acceptation
+}
+
+// Événements pour les boutons de la modal
+modal.closeButton.addEventListener('click', () => {
+    modal.container.style.display = 'none'; // Masquer la modal lorsque le bouton de fermeture est cliqué
+});
+modal.acceptButton.addEventListener('click', acceptCookies); // Appeler la fonction acceptCookies lorsque le bouton d'acceptation est cliqué
